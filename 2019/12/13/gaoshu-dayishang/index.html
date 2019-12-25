@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="橘色浪夏天的博客">
 <meta property="og:description" content="快期末考试了，整理一下自己容易错的点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-13T12:40:03.358Z">
+<meta property="og:updated_time" content="2019-12-25T09:33:00.701Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -339,7 +339,24 @@
         <p>快期末考试了，整理一下自己容易错的点。</p>
 <a id="more"></a>
 
-<p>1.求极限把未知正负的x放入根号里面时，注意是否要加负号；类似的，注意一些与e^x有关的左右极限的问题；<br>2.设f(x)可导, F(x)=f(x)(1+|sinx|), 则f(0)=0是F(x)在x=0处可导的 <strong>充要条件</strong>，（慕课测试里错选为充分但非必要条件）；<br>3.设f(x)=e^xsinx, f^(n)(x)=? (错题)  <strong>答案：(√2)^n(e^x)sin(x+n·Π/4)</strong>，当时选的(e^x)sinx+(e^x)sin(x+n·Π/2)；<br>4.函数f(x)=arctanx+1/2arcsin(2x/(1+x^2))在[1, +∞]上 <strong>为常数</strong>，错解：单调减少。错因： <strong>没有对sin内的进行求导（复合函数求导）</strong>；<br>5.设f(x)的导数为sinx, 求f(x)的全体原函数。 <strong>答案：-sinx+C1x+C2</strong> 错解：-cosx+C. 错因：没看到是f(x) <strong>的导数</strong>为sinx；<br>6.f(x)在[a,b]上连续是f(x)的定积分存在的 <strong>充分条件</strong>（非充要条件）<br>  f(x)在[a,b]上连续是积分中值定理成立的 <strong>充分条件</strong>（非充要条件）<br>  f(x)的定积分存在的条件是连续 <strong>且仅有有限个间断点</strong>；</p>
+<ol>
+<li>求极限把未知正负的x放入根号里面时，注意是否要加负号；类似的，注意一些与e^x有关的左右极限的问题；</li>
+<li>设f(x)可导, F(x)=f(x)(1+|sinx|), 则f(0)=0是F(x)在x=0处可导的 <strong>充要条件</strong>，（慕课测试里错选为充分但非必要条件）；</li>
+<li>设f(x)=e^xsinx, f^n^(x)=? (错题)  <strong>答案：(√2)^n(e^x)sin(x+n·Π/4)</strong>，当时选的(e^x)sinx+(e^x)sin(x+n·Π/2)；</li>
+<li>函数$f(x)=arctanx+\frac {1}{2} arcsin(\frac {2x}{1+x^2})$在[1, +∞]上 <strong>为常数</strong>，错解：单调减少。错因： <strong>没有对sin内的进行求导（复合函数求导）</strong>；</li>
+<li>设f(x)的导数为sinx, 求f(x)的全体原函数。 <strong>答案：-sinx+C1x+C2</strong> 错解：-cosx+C. 错因：没看到是f(x) <strong>的导数</strong>为sinx；</li>
+<li>f(x)在[a,b]上连续是f(x)的定积分存在的 <strong>充分条件</strong>（非充要条件）<br> f(x)在[a,b]上连续是积分中值定理成立的 <strong>充分条件</strong>（非充要条件）<br> f(x)的定积分存在的条件是连续 <strong>且仅有有限个间断点</strong>；</li>
+<li>对于求积分上限函数的表达式，往往可以根据特值求出C的值；</li>
+<li>若f(x)在x=x0处取得极值，则f’(x)=0 或 <strong>f’(x)不存在</strong>；</li>
+<li>设An&lt;=Xn&lt;=Bn(n=1, 2, …), 且lim(Bn-An)=0, 则极限limXn <strong>不一定存在</strong>；<br>反例：设Xn=(-1)^n, An=(-1)^n-1/n, An=(-1)^n+1/n</li>
+<li>一道没写出来的题，用反函数做。<br>题目：设$|f(x)|&lt;= \pi$,  连续的$f’(x)\ge m&gt;0(a\le x\le b)$, 证明 $|\int_{a}^bsinf(x)dx|\le \frac 2m$.</li>
+</ol>
+<p>​       证明： 因为$f’(x)\ge m&gt;0(a\le x \le b)$，所以f(x)在[a, b]上严格单调递增，从而有反函数.   设A=f(x),   B=f(b), $\psi$是$f$ 的反函数，则<br>$$<br>0&lt;\psi’(y)=\frac 1{f’(x)} \le \frac 1m,<br>$$<br>又 $|f(x)|\le \pi$，则 $-\pi \le A &lt;B \le \pi$ ，所以<br>$$<br>|\int_{a}^bsinf(x)dx|\stackrel{x=\psi(y)}{====}|\int_A^B\psi’(y)dy|\le\int_0^\pi\frac1msinydy=\frac2m.<br>$$</p>
+<ol start="11">
+<li><p>出现$ \lim_{n \to \infty} e^{nx} $，注意讨论x的正负；</p>
+</li>
+<li></li>
+</ol>
 
       
     </div>
@@ -469,7 +486,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
