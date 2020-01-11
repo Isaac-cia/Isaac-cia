@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C语言,算法,知乎," />
+  <meta name="keywords" content="Python,WebSpider," />
 
 
 
@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="第一篇博客，嗯，纪念一下~辛辛苦苦弄了半天总算是弄出来了…随便发点东西吧，转载转载。">
-<meta name="keywords" content="C语言,算法,知乎">
+<meta name="description" content="算是临时赶的，很多地方还不是很懂">
+<meta name="keywords" content="Python,WebSpider">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;my-first-blog&#x2F;index.html">
+<meta property="og:title" content="网络爬虫——爬取交通运输部网站的一个表格">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;11&#x2F;WebSpider&#x2F;index.html">
 <meta property="og:site_name" content="橘色浪夏天的博客">
-<meta property="og:description" content="第一篇博客，嗯，纪念一下~辛辛苦苦弄了半天总算是弄出来了…随便发点东西吧，转载转载。">
+<meta property="og:description" content="算是临时赶的，很多地方还不是很懂">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-05T09:48:19.303Z">
+<meta property="og:updated_time" content="2020-01-11T02:49:09.439Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/12/01/my-first-blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/11/WebSpider/"/>
 
 
 
 
 
-  <title>我的第一篇博客 | 橘色浪夏天的博客</title>
+  <title>网络爬虫——爬取交通运输部网站的一个表格 | 橘色浪夏天的博客</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/my-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/11/WebSpider/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Isaac-cia">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">网络爬虫——爬取交通运输部网站的一个表格</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-01T19:29:08+08:00">
-                2019-12-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-11T10:41:36+08:00">
+                2020-01-11
               </time>
             
 
@@ -294,8 +294,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -336,31 +336,17 @@
       
 
       
-        <p>第一篇博客，嗯，纪念一下~<br>辛辛苦苦弄了半天总算是弄出来了…<br>随便发点东西吧，转载转载。</p>
+        <p>算是临时赶的，很多地方还不是很懂</p>
 <a id="more"></a>
 
-<p>分享几个代码：</p>
-<p>1、线性求逆元：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (int i = 2; i &lt; MAXN; i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	inv[i] = mul(inv[mod%i], mod - mod / i, mod);</span></pre></td></tr></table></figure>
-<p>两行代码实现了在$O(n)$的时间内求出1到n对模m的逆元。</p>
-<p>2、求最大公因数：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int gcd(int x, int y)&#123;<span class="built_in">return</span> y ? gcd(y, x%y) : x;&#125;</span></pre></td></tr></table></figure>
+<p>先贴上代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bs4</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载表格内容</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_url</span><span class="params">(url)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    headers = &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0 (Windows\</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="string">        NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari / 537.36'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    res = requests.get(url, headers=headers)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> res</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取表格内容</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_lists</span><span class="params">(res)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    soup = bs4.BeautifulSoup(res.text, <span class="string">'html.parser'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    list = []</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    targets = soup.find_all(<span class="string">"tr"</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> targets:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        each_line = each.text.split(sep=<span class="string">'\n'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">while</span> <span class="string">''</span> <span class="keyword">in</span> each_line:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">            each_line.remove(<span class="string">''</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        list.append(each_line)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> list</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将抓取的内容写入文件中</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_into_file</span><span class="params">(list)</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    file = open(<span class="string">"passenger_transport_table.txt"</span>, <span class="string">'w'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(list)):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> each <span class="keyword">in</span> list[i]:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">            file.write(each + <span class="string">'\t'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        file.write(<span class="string">'\n'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    file.close()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">    url = <span class="string">'http://106.3.149.173/CatsCategory/listGLJCSJ5?tableName=cats_jtysybsjk_csky&amp;pubflag=1&amp;code=C13'</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">    res = get_url(url)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">    <span class="comment"># print(res.text)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">    list = get_lists(res)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">    write_into_file(list)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">    main()</span></pre></td></tr></table></figure>
 
-<p>3、树状数组<br>修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">void add(int i, int x)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (;i &lt;= n; i += i &amp; -i)tree[i] += x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<p>查询：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int sum(int i)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	int ret = 0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(; i; i -= i &amp; -i)ret +=tree[i];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">return</span> ret;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>4、zkw线段树<br>修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">void <span class="built_in">set</span>(int x, int value)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	val[x += treeLen] = value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">while</span> (x &gt;&gt;= 1)pushUp(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<p>查询：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">int query(int l,int r)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	int ret = 0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span> (l += treeLen - 1, r += treeLen +1; l ^ r ^ 1; l &gt;&gt;= 1, r &gt;&gt;= 1)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> (~l &amp; 1)ret = min(ret, val[l^1]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span> (r &amp; 1)ret = min(ret, val[r ^ 1]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="built_in">return</span> ret;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p>5、后缀数组的DC3算法</p>
-<p>6、快速傅里叶变换的数论版本（即NTT）：费马素数群的性质和复数的完美吻合。</p>
-<p>7、主席树：这是fotile巨佬考场上发明这种数据结构，用于在$O(log n)$的时间复杂度内解决序列区间第k大问题，以及区间内元素的排名。</p>
-<p>8、Pollard因数分解算法：如果你真的把关于时间复杂度的证明一步步看完后，相信你会有一种豁然开朗的感觉。这个算法真正高的地方在于把生日悖论和递推式循环节巧妙的结合在一起，最后运用递推方程主定理的理论，使得时间复杂度达到了看似不可能的期望$n^0.25$的数量级。</p>
-<p>转转转转转</p>
+<p>还不是很理解的地方：</p>
+<ol>
+<li>headers是干什么用的？虽然是因为访问不了才加上了这一段代码，但还不是很理解；</li>
+<li>具体流程还不是很清楚，是对照着写的。</li>
+</ol>
 
       
     </div>
@@ -378,11 +364,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           
-            <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-            <a href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag"><i class="fa fa-tag"></i> 知乎</a>
+            <a href="/tags/WebSpider/" rel="tag"><i class="fa fa-tag"></i> WebSpider</a>
           
         </div>
       
@@ -395,15 +379,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/01/11/linear-regression/" rel="next" title="简单线性回归(Linear Regression)——梯度下降法(Gradient Descent)">
+                <i class="fa fa-chevron-left"></i> 简单线性回归(Linear Regression)——梯度下降法(Gradient Descent)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/02/my-second-blog/" rel="prev" title="博客主题配置中遇到的问题">
-                博客主题配置中遇到的问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
